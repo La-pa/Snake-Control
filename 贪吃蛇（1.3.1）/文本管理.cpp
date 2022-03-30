@@ -29,7 +29,7 @@ void GSnake_MaxScore()
 		if(kbhit())
 		{ 
 			ch = getch();
-			ch = getch();
+			//ch = getch();
 			switch (ch)
 			{
 			case'1':Game_Snake_Start(); break;
