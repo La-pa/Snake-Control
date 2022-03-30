@@ -1,9 +1,12 @@
 #pragma once
+#include<cstdio>
+#include<cstdlib>
 #include <iostream>
 #include<Windows.h>
 #include<control.h>
 #include<conio.h>
-#include<graphics.h>
+#include<fstream>
+//#include<graphics.h>
 #include<time.h>	//有各种时间函数
 #pragma comment (lib,"winmm.lib")
 
@@ -79,3 +82,9 @@ const int game_over_y = 12;
 
 //游戏开始界面的背景图片
 void Game_Snake_Start_Background();
+
+//最高分（从txt文件导入解决方案）
+int GSnake_MaxScoreInput();
+
+//最高分界面
+void GSnake_MaxScore();

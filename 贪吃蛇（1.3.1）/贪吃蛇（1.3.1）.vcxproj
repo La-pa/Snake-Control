@@ -145,10 +145,15 @@
     <ClInclude Include="declaration.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="全局变量.cpp" />
     <ClCompile Include="文本管理.cpp" />
     <ClCompile Include="游戏内容.cpp" />
     <ClCompile Include="界面.cpp" />
     <ClCompile Include="源.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\picture\主界面.jpg" />
+    <Image Include="..\picture\游戏进行界面.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

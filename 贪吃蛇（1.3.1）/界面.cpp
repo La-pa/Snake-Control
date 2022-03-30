@@ -12,7 +12,10 @@ void Game_Snake_Start()
 	Gotoxy(42, 17);
 	cout << "2.游戏规则" ;
 	Gotoxy(42, 19);
-	cout << "3.退出游戏" ;
+	cout << "3.最高分";
+	Gotoxy(42, 21);
+	cout << "4.退出游戏" ;
+
 
 	char option = '1';
 	L1:
@@ -21,7 +24,8 @@ void Game_Snake_Start()
 	{
 	case '1':Game_Snake_ing(); break;
 	case '2':GSnake_Rule(); break;
-	case '3':break;
+	case '3':GSnake_MaxScore(); break;
+	case '4':exit(0); break;
 	default: Gotoxy(0, 29); cout << "请重新输入"; goto L1;
 	}
 	return;
