@@ -86,5 +86,8 @@ void Game_Snake_Start_Background();
 //最高分（从txt文件导入解决方案）
 int GSnake_MaxScoreInput();
 
+//最高分（导出txt文件解决方案）
+void GSnake_MaxScoreOutput(int max);
+
 //最高分界面
 void GSnake_MaxScore();

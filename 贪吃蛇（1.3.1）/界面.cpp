@@ -37,11 +37,13 @@ void Game_Snake_ing()
 {
 	//界面
 	system("cls");//清空界面
+	score = 0;
 	GSnake_Map();
 
 	direction = RIGHT;
 	history_direction = RIGHT;
 
+	
 	//得分
 	Gotoxy(72, 14);
 	cout << "分数: ";
@@ -69,6 +71,17 @@ void Game_Snake_Over()
 	cout << "您的成绩：";
 	Gotoxy(game_over_x, game_over_y + 4);
 	cout << "分数: " << score;
+
+	//判断是否需要更新最高分
+	int	max = GSnake_MaxScoreInput();
+	if (max < score)
+	{
+		max = score;
+		GSnake_MaxScoreOutput(max);
+		Gotoxy(game_over_x, game_over_y + 6);
+		cout << "!!!新纪录!!!";
+	}
+
 
 	//其他操作
 	Gotoxy(game_over_x - 2, game_over_y + 9);

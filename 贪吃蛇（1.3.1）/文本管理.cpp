@@ -42,7 +42,7 @@ void GSnake_MaxScore()
 
 int GSnake_MaxScoreInput()
 {
-	int Max = 30;
+	int Max = 0;
 	FILE* fp;
 	fp = fopen("Max Score.txt", "r");
 	if (fp == NULL)
@@ -56,5 +56,18 @@ int GSnake_MaxScoreInput()
 	fclose(fp);
 
 	return Max;
+}
+
+void GSnake_MaxScoreOutput(int max)
+{
+	FILE* fp;
+	fp = fopen("Max Score.txt", "w");
+	if (fp == NULL)
+	{
+		printf("Fail to open the file!");
+		exit(0);
+	}
+	fprintf(fp, "%d", max);
+	fclose(fp);
 }
 
